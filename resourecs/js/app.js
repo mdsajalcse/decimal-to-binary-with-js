@@ -1,16 +1,24 @@
-// const decimalNumber=(document.getElementById('input1'));
-//      const resultBinary=(doucment.getElementById('result'));
 
-document.getElementById('myBtn').addEventListener('click',function() {
-     
-    console.log("clicked");
-     
+const number=document.getElementById('result');
 
-    // const FirstValue=decimalNumber.value;
+document.getElementById('submit').addEventListener('click',function() {
 
-    // if(decimalNumber.value==''){
-    // alert('please enter valid value');
+    const num= document.getElementById('number');
+    const numValue=num.value;
 
-
+    if(numValue===''){
+        alert('Enter a number !');
+    }
+    else if(numValue<0){
+        alert('Enter a Positive number ! ');
+    }
+    else{
+        num.value="";
+        binaryNumber=Number(numValue).toString(2);
+        result.innerText=binaryNumber;
+    }
 
 })
+
+
+
